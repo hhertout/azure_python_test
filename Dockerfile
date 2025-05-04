@@ -8,4 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["fastapi", "dev",  "main.py"]
+EXPOSE 8000
+
+CMD ["fastapi", "dev",  "main.py", "--host=0.0.0.0"]
