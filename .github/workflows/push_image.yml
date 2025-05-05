@@ -24,7 +24,7 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ${{ env.AZ_REGISTRY }}/az_app:${{ github.sha }}
+          tags: ${{ secrets.AZ_REGISTRY }}/az_app:${{ github.sha }}
 
   docker_push:
     runs-on: ubuntu-latest
